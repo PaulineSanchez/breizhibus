@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'bus_ajout.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>Breizhibus</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="{{url_for('index')}}"><img src="static\logo-bus.jpg" alt="logo bus"></a> <br> <br>
+             <p class="titre">Breizhibus</p>
+        </div>
+        <div class="contenu">
+            <div class="bouton_choix">
+                <a href="{{url_for('bus_ajout')}}"><button class="bouton"> Ajouter un bus </button> </a>
+                <a href="{{url_for('bus_modif')}}"><button class="bouton"> Modifier un bus </button> </a>
+                <a href="{{url_for('bus_sup')}}"><button class="bouton"> Supprimer un bus </button> </a>
+            </div>
+
+            <div class="tableau">
+                <table>
+                    <tr>
+                        <th>Numero</th>
+                        <th>Immatriculation</th>
+                        <th>Nombre de place</th>
+                        <th>Ligne</th>
+                    </tr>
+
+                    {% for bus in liste_bus %}
+                    <tr>
+                        <td>{{ bus["numero"] }}</td>
+                        <td>{{ bus["immatriculation"] }}</td>
+                        <td>{{ bus["nombre_place"] }}</td>
+                        <td>{{ bus["ligne"] }}</td>
+                    </tr>
+                    {% endfor %} 
+                </table>
+            </div>
+             <a href="{{url_for('index')}}"><button class="bouton"> Retour page principale </button> </a>
+        </div>
+   
+    </body>
+</html>

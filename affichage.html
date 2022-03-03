@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'affichage.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>Breizhibus</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="{{url_for('index')}}"><img src="static\logo-bus.jpg" alt="logo bus"></a> <br> <br>
+             <p class="titre">Breizhibus</p>
+        </div>
+        <div class="contenu">
+            <!-- <h2> Arrêts de la ligne de bus {{ligne}} : </h2> -->
+            {%if ligne == "Bleu" %} 
+                <h2>Arrêts de la ligne de&nbsp;<span class="bleu">bus bleu </span></h2>
+            {% endif %}
+            {%if ligne == "Rouge" %} 
+                <h2>Arrêts de la ligne de&nbsp;<span class="rouge">bus rouge </span></h2> 
+            {% endif %}
+            {%if ligne == "Vert" %} 
+                <h2>Arrêts de la ligne de&nbsp;<span class="vert">bus vert </span></h2> 
+            {% endif %}
+
+
+            <div class="tableau">
+                <table>
+                    <tr>
+                        <th>Arrêt</th>
+                        <th>Adresse</th>
+                    </tr>
+
+                    {% for bus in liste_ar_ad %}
+                    <tr>
+                        <td>{{ bus["nom_arret"] }}</td>
+                        <td>{{ bus["adresse"] }}</td>
+                    </tr>
+                    {% endfor %} 
+                </table>
+            </div>
+            <br>
+            <a href="{{url_for('index')}}"><button class="bouton"> Retour page principale </button> </a>       
+        </div>
+    </body>
+</html>

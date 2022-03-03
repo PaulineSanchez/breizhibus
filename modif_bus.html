@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'ppb.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>Breizhibus</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="{{url_for('index')}}"><img src="../static/logo-bus.jpg" alt="logo bus"></a> <br> <br>
+            <p class="titre">Breizhibus</p>
+        </div>
+        <div class="formubus">
+            <form method="POST" action="{{url_for('modif')}}" class="formulaire">
+                
+                <!-- <label for="numero">Numéro bus:</label>
+                <input class="Rad" type="text" name="numero" id="numero" required> -->
+
+                <label for ="numero"> Numéro: </label>
+                <select class="Rad" name="numero" size="1" required>
+                    <option value=""> </option>
+                    {% for bus in liste_bus %}
+                        <option value="{{ bus['numero'] }}">{{ bus['numero'] }}</option>
+                    {% endfor %}
+                </select> <br>
+            
+                <label for="immatriculation">Immatriculation:</label>
+                <input class="Rad" type="text" name="immatriculation"  placeholder="AB123AB" id="immatriculation" required> <br>
+
+                <label for="nombre_place">Nombre de passagers:</label>
+                <input class="Rad" type="text" name="nombre_place" id="nombre_place" required> <br>
+
+                <label for ="ligne"> Nom de la ligne: </label>
+                <select class="Rad" name="ligne" size="1" required>
+                    <option value=""> </option>
+                    <option value="Rouge">Rouge</option>
+                    <option value="Bleu">Bleu</option> 
+                    <option value="Vert">Vert</option> 
+                </select> <br>
+
+                <button type="submit" class="boutonvoir">Modifier bus</button> <br> <br>
+            </form>
+        </div>
+    </body>
+</html>

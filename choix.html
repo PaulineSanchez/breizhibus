@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'choix.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Breizhibus</title>
+</head>
+    <body>
+            <div class="header">
+                <a href="{{url_for('index')}}"><img src="static\logo-bus.jpg" alt="logo bus"></a> <br> <br>
+                 <p class="titre">Breizhibus</p>
+            </div>
+
+            <div class="fusionnage">
+                <div class="split left">
+                    <span><h2>Accès <span class="texte-gras">usager</span> Breizhibus</h2></span> <br>
+                        <a href="{{url_for('index2')}}"><button class="boutonusager"> Usager </button> </a> 
+                </div>
+
+                <div class="split right">
+                    <span><h2>Accès <span class="texte-gras">professionel</span> Breizhibus</h2></span> <br> 
+                    <div>
+                        <form method="POST" action="{{url_for('index3')}}" class="formulaire">
+                            <label for="nom">Nom:</label>
+                            <input class="Rad" type="text" name="nom" id="nom" required>
+                            <label for="mdp">Mot de passe:</label>
+                            <input class="Rad" type="password" name="mdp" id="mdp" required> <br>
+                            <button type="submit" class="Rad inputColor">Connexion Professionnel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

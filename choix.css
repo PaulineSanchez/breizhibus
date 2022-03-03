@@ -1,0 +1,111 @@
+.fusionnage {
+    display:flex;
+    width: 100%;
+    background-image: url("plan-bibus.png");
+  }
+
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width:50%;
+    background: rgba(51, 28, 3, 0.9);
+    padding-left: 7px;
+    font-family: 'Roboto';
+    box-shadow: 0 0 5px 5px whitesmoke;
+    color: goldenrod;
+}
+  
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 6%;
+    background: rgba(51, 28, 3, 0.9);
+    width:50%;
+    font-family: 'Roboto';
+    box-shadow: 0 0 5px 5px whitesmoke;
+    color: goldenrod;
+    
+}
+
+.header{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    align-content: left;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(97, 62, 37);
+    background: goldenrod;
+    padding: 12px;
+    font-size: 60px;
+    height: 120px;
+    font-weight: bold;
+}
+
+.titre{
+    padding-left: 15px;
+}
+
+img{
+    border-radius: 15%;
+    width: 120px;
+    height: 120px;
+}
+
+.contenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid rgb(0, 0, 0);
+    color: goldenrod;
+    padding: 12px;
+    font-size: 45px;
+    font-family: 'Roboto';
+    background-image: url("plan-bibus.png");
+    box-shadow: inset 0 0 0 1000px rgba(51, 28, 3, 0.9);
+}
+
+.contenu div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 600px;
+    height: 400px;
+}
+
+.boutonvoir{
+    font-size: 20px;
+}
+
+.formulaire{
+    display: flex;
+    flex-direction: column;
+}
+
+.Rad{
+    width: 70%;
+}
+
+.choix{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.boutonusager{
+    font-size: 30px;
+}
+
+.texte-gras {
+    font-weight: bold;
+    color: white;
+  }

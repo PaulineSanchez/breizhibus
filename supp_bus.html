@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'ppb.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>Breizhibus</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="{{url_for('index')}}"><img src="../static/logo-bus.jpg" alt="logo bus"></a> <br> <br>
+            <p class="titre">Breizhibus</p>
+        </div>
+        <div class="formubus">
+            <form method="POST" action="{{url_for('supp')}}" class="formulaire">
+                <br> <br> 
+                <!-- <label for="numero">Numéro bus:</label>
+                <input class="Rad" type="text" name="numero" id="numero" required> -->
+
+                <label for ="numero"> Numéro du bus à supprimer: </label>
+                <select class="Rad" name="numero" size="1" required>
+                    <option value=""> </option>
+                    {% for bus in liste_bus %}
+                        <option value="{{ bus['numero'] }}">{{ bus['numero'] }}</option>
+                    {% endfor %}
+                </select> <br>
+
+                <button type="submit" class="boutonvoir">Supprimer bus</button>
+            </form>
+        </div>
+    </body>
+</html>

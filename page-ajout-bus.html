@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'ppb.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Breizhibus</title>
+</head>
+    <body>
+        <div class="header">
+            <a href="{{url_for('index')}}"><img src="../static/logo-bus.png" alt="logo bus"></a> <br> <br>
+            <p class="titre">Breizhibus</p>
+        </div>
+        <div class="formubus">   
+            <div>   
+                <form method="POST" action="{{url_for('ajout')}}" class="formulaire">
+                    <label for ="numero"> Nom du bus: </label>
+                        <input type="text" name="numero" placeholder="BB00" size="30" required/> <br>
+                    <label for="immatriculation"> Immatriculation du bus: </label>
+                        <input type="text" name="immatriculation" placeholder="AB123AB" size="30" required/> <br>
+                    <label for="nombre_place"> Nombre de places : </label>
+                    <input class="Rad" type="text" name="nombre_place" id="nombre_place" required> <br>
+                    <label for="ligne"> Choix de la ligne : </label>
+                        <select name="ligne" required> 
+                            <option value=""> </option>
+                            <option value="Rouge">Rouge</option>
+                            <option value="Bleu">Bleu</option>
+                            <option value="Vert">Vert</option>
+                        </select> <br>
+                    <button type="submit" class="boutonvoir">Créer bus</button>
+                </form>
+            </div> 
+        </div>
+    </body>
+</html>

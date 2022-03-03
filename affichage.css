@@ -1,0 +1,86 @@
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 3px solid rgb(24, 20, 9);
+    color: white;
+    width: 400px;
+    font-family: 'Roboto';
+}
+
+th{
+    border: 3px solid rgb(24, 20, 9);
+    color: goldenrod;
+    width: 400px;
+    font-family: 'Roboto';
+}
+
+.tableau{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+    margin-top: 120px;
+    font-family: 'Roboto';
+    font-size: 35px;
+}
+
+.header{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    align-content: left;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(97, 62, 37);
+    background: goldenrod;
+    padding: 12px;
+    font-size: 60px;
+    height: 120px;
+    font-weight: bold;
+}
+
+.titre{
+    padding-left: 15px;
+}
+
+img{
+    border-radius: 15%;
+    width: 120px;
+    height: 120px;
+}
+
+.bouton{
+    display: grid;
+    margin: auto;
+}
+
+.contenu{
+    display: flex;
+    border: 1px solid rgb(0, 0, 0);
+    color: goldenrod;
+    padding: 12px;
+    font-size: 45px;
+    font-family: 'Roboto';
+    flex-direction: column;
+    background-image: url("plan-bibus.png");
+    box-shadow: inset 0 0 0 1000px rgba(51, 28, 3, 0.9);
+}
+
+.bleu{
+color:deepskyblue;
+font-weight: bold;
+}
+
+.rouge{
+color: red;
+font-weight: bold;
+}
+
+.vert{
+color: green;
+font-weight: bold;
+}
